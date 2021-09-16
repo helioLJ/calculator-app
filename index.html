@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style-calculator-app.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">
+      <h2 class="header__title text">calc</h2>
+      <div class="header__themes">
+        <p class="text">THEME</p>
+        <div class="header__themes___change">
+          <div class="header__themes___change____buttons">
+            <button id="btn-theme-1" class="header__themes___change____buttons_____btn text">1</button>
+            <button id="btn-theme-2" class="header__themes___change____buttons_____btn text">2</button>
+            <button id="btn-theme-3" class="header__themes___change____buttons_____btn text">3</button>
+          </div>
+          <div id="theme-bar" class="header__themes___change____bar">
+            <div id="theme-circle" class="header__themes___change____bar_____circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result text">
+      <div data-previous-operand class="result__operation"></div>
+      <div data-current-operand class="result__result"></div>
+    </div>
+
+    <div class="digits">
+      <button data-number class="digits__button btn-style-1 btn">7</button>
+      <button data-number class="digits__button btn-style-1 btn">8</button>
+      <button data-number class="digits__button btn-style-1 btn">9</button>
+      <button data-delete class="digits__button btn-style-2 btn">DEL</button>
+      <button data-number class="digits__button btn-style-1 btn">4</button>
+      <button data-number class="digits__button btn-style-1 btn">5</button>
+      <button data-number class="digits__button btn-style-1 btn">6</button>
+      <button data-operation class="digits__button btn-style-1 btn">+</button>
+      <button data-number class="digits__button btn-style-1 btn">1</button>
+      <button data-number class="digits__button btn-style-1 btn">2</button>
+      <button data-number class="digits__button btn-style-1 btn">3</button>
+      <button data-operation class="digits__button btn-style-1 btn">-</button>
+      <button data-number class="digits__button btn-style-1 btn">.</button>
+      <button data-number class="digits__button btn-style-1 btn">0</button>
+      <button data-operation class="digits__button btn-style-1 btn">/</button>
+      <button data-operation class="digits__button btn-style-1 btn">x</button>
+
+      <div class="digits__equal">
+        <button data-reset class="digits__equal___button btn-style-2 btn">RESET</button>
+        <button data-equals class="digits__equal___button btn-style-3 btn">=</button>
+      </div>
+    </div>
+
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        Coded by <a style="color: blue" href="https://github.com/helioLJ" target="_blank">Hélio L. J.</a>
+      </div>
+  </div>
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>

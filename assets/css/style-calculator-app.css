@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Sparta', sans-serif;
+    font-weight: 700;
+}
+
+:root {
+    /* Colors */ 
+        /* Theme 1 */
+            /* Backgrounds */ 
+            --very-dark-desaturated-blue1: hsl(222, 26%, 31%); /* (main background) */ 
+            --very-dark-desaturated-blue2: hsl(223, 31%, 20%); /* (toggle background, keypad background) */ 
+            --very-dark-desaturated-blue3: hsl(224, 36%, 15%); /* (screen background) */
+            /* Keys */ 
+            --desaturated-dark-blue1: hsl(225, 21%, 49%); /* (key background) */ 
+            --desaturated-dark-blue2: hsl(224, 28%, 35%); /* (key shadow) */ 
+            --red: hsl(6, 63%, 50%); /* (key background, toggle) */ 
+            --dark-red: hsl(6, 70%, 34%); /* (key shadow) */ 
+            --light-grayish-orange: hsl(30, 25%, 89%); /* (key background) */ 
+            --grayish-orange: hsl(28, 16%, 65%); /* (key shadow) */ 
+            /* Text */ 
+            --very-dark-grayish-blue: hsl(221, 14%, 31%);
+            --white: rgb(255, 255, 255);
+        /* Theme 2 */ 
+            /* Backgrounds */ 
+            --light-gray: hsl(0, 0%, 90%); /* (main background) */
+            --grayish-red: hsl(0, 5%, 81%); /* (toggle background, keypad background) */
+            --very-light-gray: hsl(0, 0%, 93%); /* (screen background) */
+            /* Keys */
+            --dark-moderate-cyan: hsl(185, 42%, 37%); /* (key background) */
+            --very-dark-cyan: hsl(185, 58%, 25%); /* (key shadow) */
+            --orange: hsl(25, 98%, 40%); /* (key background, toggle) */
+            --dark-orange: hsl(25, 99%, 27%); /* (key shadow) */
+            --light-grayish-yellow: hsl(45, 7%, 89%); /* (key background) */
+            --dark-grayish-orange: hsl(35, 11%, 61%); /* (key shadow) */
+            /* Text */ 
+            --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+            --white: rgb(255, 255, 255); /* (text) */            
+        /* Theme 3 */ 
+            /* Backgrounds */ 
+            --very-dark-violet: hsl(268, 75%, 9%); /* (main background) */
+            --very-dark-violet2: hsl(268, 71%, 12%); /* (toggle background, keypad background, screen background) */
+            /* Keys */ 
+            /*
+            1 - btnstyle 2
+            2 - btnstyle 3
+            3 - btnstyle 1
+            */
+            --dark-violet: hsl(281, 89%, 26%); /* (key background) */
+            --vivid-magenta: hsl(285, 91%, 52%); /* (key shadow) */
+
+            --pure-cyan: hsl(176, 100%, 44%); /* (key background, toggle) */
+            --soft-cyan: hsl(177, 92%, 70%); /* (key shadow) */
+
+            --very-dark-violet: hsl(268, 47%, 21%); /* (key background) */
+            --dark-magenta: hsl(290, 70%, 36%); /* (key shadow) */
+            /* Text */ 
+            --light-yellow: hsl(52, 100%, 62%);
+            --very-dark-blue: hsl(198, 20%, 13%);
+            --white: rgb(255, 255, 255); /* (text) */
+}
+
+body {
+    background-color: var(--very-dark-desaturated-blue1);
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    padding: 2rem;
+    transition: backgroundColor, 0.3s;
+    overflow: hidden;
+}
+
+button {
+    border-radius: 5px;
+    font-family: 'Spartan', sans-serif;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: opacity, 0.3s, color, 0.3s;
+}
+
+button:active {
+    position: relative;
+    left: 1px;
+    top: 1px;
+}
+
+button:hover {
+    opacity: 0.6;
+}
+
+.container {
+    margin: 1.5rem auto;
+    max-width: 450px;
+}
+
+.header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    color: var(--white);
+    margin-bottom: 1.4rem;
+}
+
+.header__title {
+    font-size: 1.6rem;
+}
+
+.header__themes {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    font-size: .6rem;
+    width: 100px;
+}
+
+.header__themes p {
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.header__themes___change____buttons_____btn {
+    background-color: transparent;
+    color: var(--white);
+    font-size: .6rem;
+    padding: 4px;
+    padding-bottom: 3px;
+}
+
+.header__themes___change____bar {
+    background-color: var(--very-dark-desaturated-blue2);
+    border-radius: 20px;
+    height: 14px;
+    width: 100%;
+    position: relative;
+}
+
+.header__themes___change____bar_____circle {
+    background-color: var(--red);
+    border-radius: 100%;
+    height: 8px;
+    width: 8px;
+    top: 3px;
+    left: 3px;
+    position: absolute;
+    transition: left, 0.2s;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-dark-desaturated-blue3);
+    border-radius: 5px;
+    color: var(--white);
+    font-size: 1.4rem;
+    height: 80px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.result__operation {
+    width: 100%;
+    text-align: right;
+    font-size: .8rem;
+    opacity: 0.7;
+    margin-bottom: .7rem;
+}
+
+.result__result {
+    width: 100%;
+    text-align: right;
+}
+
+.digits {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--very-dark-desaturated-blue2);
+    border-radius: 5px;
+    padding: 1rem;
+    height: 400px;
+}
+
+.digits__button {
+    font-size: 1.5rem;
+    height: 55px;
+    width: calc(25% - 4%);
+}
+
+.digits__button, .digits__equal___button {
+    padding-top: 7px;
+    margin: 2%;
+}
+
+.digits__equal {
+    display: flex;
+    width: 100%;
+}
+
+.digits__equal___button {
+    width: calc(50% - 4%);
+    height: 45px;
+}
+
+.btn-style-1 {
+    background-color: var(--light-grayish-orange);
+    color: var(--very-dark-grayish-blue);
+    box-shadow: 0px 4px 0px -1px var(--grayish-orange);
+}
+
+.btn-style-2 {
+    background-color: var(--desaturated-dark-blue1);
+    color: var(--white);
+    box-shadow: 0px 4px 0px -1px var(--desaturated-dark-blue2);
+
+    font-size: 1rem;
+}
+
+.btn-style-3 {
+    background-color: var(--red);
+    color: var(--white);
+    box-shadow: 0px 4px 0px -1px var(--dark-red);
+
+    font-size: 1rem;
+}
+
+.text {
+    transition: color, 0.3s;
+}
+
+.attribution {
+    margin: 1rem auto;
+    font-size: .7rem;
+}
